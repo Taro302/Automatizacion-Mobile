@@ -4,10 +4,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
 public class CatalogoScreen extends PageObject {
 
@@ -51,13 +48,11 @@ public class CatalogoScreen extends PageObject {
         Sauce_Labs_Backpack.click();
     }
 
-    // Método que espera que el título esté visible y habilitado
     public boolean titulo() {
         waitFor(ExpectedConditions.visibilityOf(tittle));
         return tittle.isEnabled();
     }
 
-    // Método que espera que la lista de productos esté visible y habilitada
     public boolean listaProducto() {
         waitFor(ExpectedConditions.visibilityOf(productList));
         return productList.isEnabled();
